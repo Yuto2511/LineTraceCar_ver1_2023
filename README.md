@@ -12,7 +12,7 @@ CPU,モータ共用
 Lipo / 2セル / 7.4[v] / 240[mAh] / 
 
 ### モータ
-- 走行用モータ DCモータ : 2[個] / タミヤ
+- 走行用モータ DCモータ : 2[個] / マブチ RE-260RA
 - モータドライバ : 
 
 ### センサ
@@ -28,8 +28,8 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
 (スキッドステアに変更も可)
 
 ### 速度(設計上最大)
-- 速度 : 5[m/s]
-- 加速度 : 3[m/s/s]
+- 速度 : 3[m/s]
+- 加速度 : 2[m/s/s]
 
 
 ## 設計
@@ -54,10 +54,11 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
 
 ### 最高速度・最高加速度
 走らせたい速度と加速度を決める(適当).
-- 速度 : 5[m/s]
-- 加速度 : 3[m/s/s]
+- 速度 : 3[m/s]
+- 加速度 : 2[m/s/s]
 
 ### モータの選定
+- 使用するモータ : [RE-260RA(マブチ)](https://www.mabuchi-motor.co.jp/motorize/branch/motor/pdf/re_260ra.pdf)  
 質量、タイヤ径、ギア比、速度・加速度からモータを選定します。
 - トルクの計算  
   運動方程式 : $ma = F$  
@@ -67,7 +68,7 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
   $T_t = mar$  
   このタイヤのトルクにギア比をかければモータのトルクが導出できる.  
   そうすると今回ほしいトルクが求められる.  
-  $T = {1 \over 3} \cdot T_t = {1 \over 3} \cdot mar = {1 \over 3} \cdot 100 \times 10^-3 [kg] \cdot 3 [m/s/s] \cdot {24 \times 10^-3 [m] \over 2} = 0.0012 [Nm] = 1.2[mNm]$
+  $T = {1 \over 3} \cdot T_t = {1 \over 3} \cdot mar = {1 \over 3} \cdot 100 \times 10^-3 [kg] \cdot 2 [m/s/s] \cdot {24 \times 10^-3 [m] \over 2} = 0.0008 [Nm] = 0.8[mNm]$
 - 回転数の計算  
   タイヤの回転数 : $rpm_r$ (rpm:"rotations per minute")  
   とすると、速度から  
@@ -75,9 +76,21 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
   $rpm_r = {v \over 2 \pi r} \cdot 60$  
   このタイヤの回転数にギア比をかければ、モータの回転数が導出できる.  
   そうすると今回ほしい回転数が求められる.  
-  $rpm = 3 \cdot rpm_r = 3 \cdot {v \over 2 \pi r} \cdot 60 = 3 \cdot {2 \cdot 5 [m/s] \over 2 \pi 24 \times 10^-3 [m]} \cdot 60 \approx 11937[rpm]$  
+  $rpm = 3 \cdot rpm_r = 3 \cdot {v \over 2 \pi r} \cdot 60 = 3 \cdot {2 \cdot 3 [m/s] \over 2 \pi 24 \times 10^-3 [m]} \cdot 60 \approx 7162[rpm]$  
 
 このトルクと回転数を超えるモータを選べばOK
+
+## 電子パーツ　
+
+### CPU
+- AVRマイコン / ATMEGA328  
+  秋月電子で販売されている[AE-ATMEA328-MINI(Arduio Pro Mini上位互換)](https://akizukidenshi.com/catalog/g/gK-10347/)を使用.
+
+### 電源
+- DC\DCコンバータ 5[v] 3[A] [SI-8050S](https://akizukidenshi.com/catalog/g/gI-06550/)
+- 三端子レギュレータ 3.3[v] 1.5[A] [NJM2396F33](https://akizukidenshi.com/catalog/g/gI-16676/)
+
+### 
 
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
