@@ -58,8 +58,8 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
 - 加速度 : 2[m/s/s]
 
 ### モータの選定
-- 使用するモータ : [RE-260RA(マブチ)](https://www.mabuchi-motor.co.jp/motorize/branch/motor/pdf/re_260ra.pdf)  
 質量、タイヤ径、ギア比、速度・加速度からモータを選定します。
+- 使用するモータ : [RE-260RA(マブチ)](https://www.mabuchi-motor.co.jp/motorize/branch/motor/pdf/re_260ra.pdf)  
 - トルクの計算  
   運動方程式 : $ma = F$  
   タイヤのトルク : $T_t = Fr$ ( $r$ :タイヤの半径)  
@@ -87,8 +87,10 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
   秋月電子で販売されている[AE-ATMEA328-MINI(Arduio Pro Mini上位互換)](https://akizukidenshi.com/catalog/g/gK-10347/)を使用.
 
 ### 電源
-- DC\DCコンバータ 5[v] 3[A] [SI-8050S](https://akizukidenshi.com/catalog/g/gI-06550/)
-- 三端子レギュレータ 3.3[v] 1.5[A] [NJM2396F33](https://akizukidenshi.com/catalog/g/gI-16676/)
+- DC\DCコンバータ 5[v] 1.5[A] [NJM7805FA](https://akizukidenshi.com/catalog/g/gI-08678/)
+
+### モータドライバ
+- TOSHIBA [TB6643KQ](https://akizukidenshi.com/catalog/g/gI-07688/)
 
 ### 
 
