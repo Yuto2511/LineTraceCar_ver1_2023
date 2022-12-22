@@ -13,7 +13,7 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
 
 ### モータ
 - 走行用モータ DCモータ : 2[個] / マブチ RE-260RA
-- モータドライバ : 
+- モータドライバ : TB6643KQ
 
 ### センサ
 - 赤外線センサ : 6[個] / / (ラインセンサ)
@@ -92,7 +92,9 @@ Lipo / 2セル / 7.4[v] / 240[mAh] /
 ### モータドライバ
 - TOSHIBA [TB6643KQ](https://akizukidenshi.com/catalog/g/gI-07688/)
 
-### 
+### ラインセンサ
+- 赤外線LED [OSI3CA5111A](https://akizukidenshi.com/catalog/g/gI-04779/)
+- 照度センサ(フォトトランジスタ) [NJK7302L-F3](https://akizukidenshi.com/catalog/g/gI-08910/)
 
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
