@@ -1,4 +1,4 @@
-# LineTraceCar_Original_2023
+# LineTraceCar_ver1_2023
 
 ライントレースカーキットを作るにあたっての性能、設計、製作方法等をここに示す。
 
